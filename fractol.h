@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 11:06:18 by huahmad           #+#    #+#             */
-/*   Updated: 2024/11/16 15:59:28 by huahmad          ###   ########.fr       */
+/*   Updated: 2024/11/27 13:16:28 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@
 # include <X11/keysym.h>
 # include <X11/X.h>
 
-# define HEIGHT		800
-# define WIDTH		1200
 
 // key codes
-# define ESC 27
+# define ESC 65307
 # define LEFT 65361
 # define UP 65362
 # define RIGHT 65363
@@ -75,6 +73,10 @@ void	fractolsetup(t_fractol *fractol);
 int		freeall(t_fractol *fractol);
 int		close_game(t_fractol *fractol);
 void	mandelbrot_iter(t_fractol *fractol);
+int	mouse_hook(int key_code, int x, int y, t_fractol *fractol);
+void	ft_zoomin(double x, double y, t_fractol *fractol);
+void	ft_zoomout(double x, double y, t_fractol *fractol);
+
 
 
 #endif

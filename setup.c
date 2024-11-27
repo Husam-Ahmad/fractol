@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:17:33 by huahmad           #+#    #+#             */
-/*   Updated: 2024/11/16 16:08:04 by huahmad          ###   ########.fr       */
+/*   Updated: 2024/11/27 12:57:48 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ void	calculate_mand(int x, int y, t_fractol *fractol)
 		z0 = temp;
 		if (z0 * z0 + z1 * z1 > 4)
 		{
-			mlx_pixel_put(fractol->mlx, fractol->win, (int) x, (int) y, (fractol->color * i));
+			mlx_pixel_put(fractol->mlx, fractol->win, (int) x, (int) y,
+					 (fractol->color * i));
 			break ;
 		}
 	}
@@ -70,8 +71,4 @@ void	fractolsetup(t_fractol *fractol)
 	if (ft_strncmp(fractol->name, "mandelbrot", 10))
 		mandelbrot_iter(fractol);
 	mlx_put_image_to_window(fractol->mlx, fractol->win, fractol->img, 0, 0);
-	mlx_hook(fractol->win, KeyPress, KeyPressMask, key_hook, fractol);
-	mlx_hook(fractol->win, DestroyNotify, StructureNotifyMask, close_game, fractol);
-	// mlx_mouse_hook(fractal.win, mouse_hook, &fractol);
-	mlx_loop(fractol->mlx);
 }

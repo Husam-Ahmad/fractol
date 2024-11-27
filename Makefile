@@ -6,7 +6,7 @@
 #    By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 11:22:05 by huahmad           #+#    #+#              #
-#    Updated: 2024/11/16 15:47:59 by huahmad          ###   ########.fr        #
+#    Updated: 2024/11/27 12:34:38 by huahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ INCLUDES = -I $(LIBMLX)/include
 SRCS = fractol.c \
 		setup.c \
 		hooking.c \
-		
+		formouse.c \
+
 LIBFT = ./libft/libft.a
 
 all: $(NAME)
