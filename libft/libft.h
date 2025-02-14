@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 14:34:53 by huahmad           #+#    #+#             */
-/*   Updated: 2024/09/17 15:16:17 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/01/30 16:44:31 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+#include <stdarg.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
@@ -27,7 +28,7 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-int		ft_atoi(const char *str);
+long		ft_atoi(char *str); //long
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int s);
@@ -67,5 +68,21 @@ char	*get_next_line(int fd);
 char	*ft_strdup_gnl(char *s1);
 char	*ft_strchr_gnl(const char *s, int c);
 char	*ft_substr_gnl(char *s, unsigned int start, size_t len);
+int			ft_printf(const char *string, ...);
+void		ifnumber(int n, int	*length);
+void		ifchar(char character, int	*length);
+void		ifstring(char	*args, int	*length);
+void		ifunint(unsigned int u, int	*length);
+void		ifpointer(size_t pointer, int	*length);
+void		ifhexa(unsigned int x, int *length, char x_or_X);
+void		ft_printf_checker(char s, va_list	*args, int	*len);
+int			ft_printf(const char *string, ...);
+void		ifnumber(int n, int	*length);
+void		ifchar(char character, int	*length);
+void		ifstring(char	*args, int	*length);
+void		ifunint(unsigned int u, int	*length);
+void		ifpointer(size_t pointer, int	*length);
+void		ifhexa(unsigned int x, int *length, char x_or_X);
+
 
 #endif

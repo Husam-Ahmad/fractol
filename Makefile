@@ -6,7 +6,7 @@
 #    By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 11:22:05 by huahmad           #+#    #+#              #
-#    Updated: 2024/11/27 12:34:38 by huahmad          ###   ########.fr        #
+#    Updated: 2025/02/14 12:53:24 by huahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ INCLUDES = -I $(LIBMLX)/include
 SRCS = fractol.c \
 		setup.c \
 		hooking.c \
-		formouse.c \
+		imgbyimg.c \
+		julia.c \
 
 LIBFT = ./libft/libft.a
 
@@ -38,8 +39,8 @@ clean:
 
 fclean: clean
 	$(MAKE) fclean -C ./libft
-	@rm -rf $(NAME)
-	echo "$(NAME) was deleted"
+	@rm -rf $(NAME) && echo "$(NAME) was deleted"
+	
 
 re: clean all
 

@@ -35,7 +35,10 @@ SOURCES = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	get_next_line_bonus.c \
-	get_next_line_utils_bonus.c
+	get_next_line_utils_bonus.c \
+	ft_printf.c \
+	ft_printf_supporter.c \
+	ft_printf_converter.c	
 
 
 MAKE = \
@@ -45,18 +48,21 @@ MAKE = \
 
 OBJECTS = $(SOURCES:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fPIC
 CC = cc
 
 all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $(NAME) $?
+	chmod 777 $(NAME)
 allc: all clean
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 clean:
+	rm -f *:Zone.Identifier
 	rm -f $(OBJECTS)
 	rm -f *.so
+
 fclean: clean
 	rm -f $(NAME)
 re: fclean all

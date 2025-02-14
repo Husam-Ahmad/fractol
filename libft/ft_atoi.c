@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 19:15:29 by huahmad           #+#    #+#             */
-/*   Updated: 2024/05/30 18:13:48 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/01/28 14:16:00 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 #include <unistd.h>
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(char *str)
 {
 	int		i;
 	int		neg;
-	int		o;
+	long		o;
 	int		sign;
 
 	neg = 1;

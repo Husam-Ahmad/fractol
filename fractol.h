@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 11:06:18 by huahmad           #+#    #+#             */
-/*   Updated: 2024/11/27 13:16:28 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/02/14 12:50:27 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <stdbool.h>
 # include <math.h>
 # include "libft/libft.h"
-# include "minilibx-linux/mlx.h"
+# include "/home/huahmad/here/fractol/minilibx-linux/mlx.h"
 # include <X11/keysym.h>
 # include <X11/X.h>
 
@@ -46,24 +46,25 @@ typedef struct imaginary {
 }	t_complex;
 
 typedef struct fractol {
-	int		iterations;
-	int		color;
-	int		width;
-	int		height;
-	int		x;
-	int		y;
-	char	*name;
-	void	*mlx;
-	void	*win;
-	void	*img;
-	char	*addr;
-	int		pixel_bits;
-	int		line_bytes;
-	int		endian;
-	double	zoom;
-	double	xoff;
-	double	yoff;
+	char		*name;
+	void		*img;
+	void		*addr;
+	int			bits_per_pixel;
+	int			line_length;
+	int			endian;
+	void		*mlx;
+	void		*win;
+	int			width;
+	int			height;
 	t_complex	c;
+	double		zoom;
+	double		x;
+	double		y;
+	double		xarrow;
+	double		yarrow;
+	double		radius;
+	int			iterations;
+	int			color;
 }	t_fractol;
 
 void	for_mandelbrot(t_fractol *fractol, char *name);
@@ -73,10 +74,14 @@ void	fractolsetup(t_fractol *fractol);
 int		freeall(t_fractol *fractol);
 int		close_game(t_fractol *fractol);
 void	mandelbrot_iter(t_fractol *fractol);
-int	mouse_hook(int key_code, int x, int y, t_fractol *fractol);
+int		mouse_hook(int key_code, int x, int y, t_fractol *fractol);
 void	ft_zoomin(double x, double y, t_fractol *fractol);
+int		imgbyimg(t_fractol *fractol, int x, int y, int color);
 void	ft_zoomout(double x, double y, t_fractol *fractol);
-
+t_complex	mappoint(t_fractol *fractol, double x, double y);
+t_complex	sqr(t_complex a);
+t_complex	add(t_complex a, t_complex b);
+void	juliaset(t_fractol *julia);
 
 
 #endif
