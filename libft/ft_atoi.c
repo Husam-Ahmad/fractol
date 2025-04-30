@@ -6,47 +6,46 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 19:15:29 by huahmad           #+#    #+#             */
-/*   Updated: 2025/01/28 14:16:00 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/03/07 17:45:41 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#include "libft.h"
 
-long	ft_atoi(char *str)
+double	ft_atoi(char *str)
 {
-	int		i;
-	int		neg;
-	long		o;
+	long	integer_part;
+	double	fractional_part;
+	double	pow;
 	int		sign;
 
-	neg = 1;
-	i = 0;
-	o = 0;
-	sign = 0;
-	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	while (str[i] == '-' || str[i] == '+')
+	integer_part = 0;
+	fractional_part = 0;
+	sign = +1;
+	pow = 1;
+	while ((*str >= 9 && *str <= 13) || 32 == *str)
+		++str;
+	while ('+' == *str || '-' == *str)
+		if ('-' == *str++)
+			sign = -sign;
+	while (*str != '.' && *str)
+		integer_part = (integer_part * 10) + (*str++ - 48);
+	if ('.' == *str)
+		++str;
+	while (*str)
 	{
-		if (str[i++] == '-')
-			neg *= -1;
-		sign++;
-		if (sign > 1)
-			return (0);
+		pow /= 10;
+		fractional_part = fractional_part + (*str++ - 48) * pow;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		o = (o * 10) + (str[i] - '0');
-		i++;
-	}
-	return (o * neg);
+	return ((integer_part + fractional_part) * sign);
 }
 // int main(void)
 // {
-// 	char *s = "-54";
+// 	char *s = "-0.4";
 
-// 	printf("ft_atoi(\"%s\") = %d\n", s, ft_atoi(s));
-// 	return 0;
+// 	printf("ft_atoi(\"%s\") = %f\n", s, ft_atoi(s));
+// 	return (0);
 // }

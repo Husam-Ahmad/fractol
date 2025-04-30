@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:36:57 by huahmad           #+#    #+#             */
-/*   Updated: 2024/09/17 15:43:41 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/02/14 17:04:10 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include <unistd.h>
-# include <stdlib.h>
 # include <fcntl.h>
 # include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen_gnl(char *s);
 char	*ft_strjoin_gnl(char *s1, char *s2);

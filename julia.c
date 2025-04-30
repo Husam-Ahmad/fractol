@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 23:09:19 by huahmad           #+#    #+#             */
-/*   Updated: 2025/02/14 13:00:31 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/02/14 17:05:03 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ void	juliaset(t_fractol *julia)
 				z1 = add(sqr(z0), julia->c);
 				if (z1.x * z1.x + z1.y * z1.y > julia->radius * julia->radius)
 				{
-					imgbyimg(julia, julia->x,
-						julia->y, julia->color * i);
+					imgbyimg(julia, julia->x, julia->y, julia->color * i);
 					break ;
 				}
 				z0 = z1;

@@ -6,11 +6,11 @@
 #    By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 11:22:05 by huahmad           #+#    #+#              #
-#    Updated: 2025/02/14 12:53:24 by huahmad          ###   ########.fr        #
+#    Updated: 2025/02/14 17:07:36 by huahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fract_ol
+NAME = fractol
 CFLAGS = -Wextra -Werror -Wall -g
 LIBMLX = MLX
 MLXFLAGS = ./minilibx-linux/libmlx.a -L ./minilibx-linux -lmlx -Ilmlx -lXext -lX11

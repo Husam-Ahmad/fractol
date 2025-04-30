@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:36:17 by huahmad           #+#    #+#             */
-/*   Updated: 2024/09/17 15:17:00 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/02/14 17:04:01 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// int	main()
+// int	main(void)
 // {
 // 	int	fd1;
 // 	int	fd2;
@@ -116,5 +116,5 @@ char	*get_next_line(int fd)
 // 	printf("%s", get_next_line(fd2));
 // 	// printf("%s\n", get_next_line(fd1));
 // 	printf("%s", get_next_line(fd2));
-// 	return 0;
+// 	return (0);
 // }

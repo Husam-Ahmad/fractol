@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:38:01 by huahmad           #+#    #+#             */
-/*   Updated: 2024/09/17 15:44:03 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/02/14 17:04:14 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup_gnl(char *s1)
 	char			*dest;
 	unsigned int	i;
 
-	dest = (char *) malloc(ft_strlen_gnl(s1) + 1);
+	dest = (char *)malloc(ft_strlen_gnl(s1) + 1);
 	if (!dest)
 		return (NULL);
 	i = 0;
@@ -62,7 +62,8 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	smn = (char *) malloc((ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1) * sizeof(char));
+	smn = (char *)malloc((ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1)
+			* sizeof(char));
 	if (!smn)
 		return (NULL);
 	while (s1[j])

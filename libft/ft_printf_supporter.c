@@ -6,20 +6,20 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 19:44:29 by huahmad           #+#    #+#             */
-/*   Updated: 2025/02/03 15:12:30 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/02/14 17:04:46 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ifunint(unsigned int u, int	*length)
+void	ifunint(unsigned int u, int *length)
 {
 	if (u >= 10)
 		ifunint(u / 10, length);
 	ifchar(u % 10 + '0', length);
 }
 
-void	ifpointer(size_t pointer, int	*length)
+void	ifpointer(size_t pointer, int *length)
 {
 	char	string[25];
 	int		i;
@@ -64,7 +64,7 @@ void	ifhexa(unsigned int x, int *length, char x_or_X)
 	}
 	while (x != 0)
 	{
-		string[i] = base [x % 16];
+		string[i] = base[x % 16];
 		x = x / 16;
 		i++;
 	}
@@ -75,7 +75,7 @@ void	ifhexa(unsigned int x, int *length, char x_or_X)
 // {
 // 	int	wtvr ;
 // 	int	*ptr = &wtvr;
-	
+
 // 	ft_printf("Address of pointer (mine): %p\n", ptr);
 // 	printf("Address of pointer: %p\n", ptr);
 
@@ -98,4 +98,3 @@ void	ifhexa(unsigned int x, int *length, char x_or_X)
 // 	printf("print this hexadecimal: %x\n", 100556);
 // 	// ft_printf("this function works\n ");
 // }
- 
