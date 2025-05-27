@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:17:33 by huahmad           #+#    #+#             */
-/*   Updated: 2025/03/07 17:50:59 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/05/17 19:00:48 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ void	fractolsetup(t_fractol *fractol)
 	if (!ft_strncmp(fractol->name, "mandelbrot", 10))
 		mandelbrot_iter(fractol);
 	if (!ft_strncmp(fractol->name, "julia", 5))
-	{
 		juliaset(fractol);
-	}
 	mlx_put_image_to_window(fractol->mlx, fractol->win, fractol->img, 0, 0);
 }

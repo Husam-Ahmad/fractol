@@ -6,7 +6,7 @@
 /*   By: huahmad <huahmad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 11:06:18 by huahmad           #+#    #+#             */
-/*   Updated: 2025/03/07 17:52:55 by huahmad          ###   ########.fr       */
+/*   Updated: 2025/05/27 17:43:39 by huahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,7 @@ typedef struct fractol
 }				t_fractol;
 
 void			for_mandelbrot(t_fractol *fractol, char *name);
-void			for_julia(t_fractol *fractol, char *name,
-					char *param1, char *param2);
+void			for_julia(t_fractol *fractol, char **arg, int argc);
 int				key_hook(int keycode, t_fractol *fractol);
 void			fractolsetup(t_fractol *fractol);
 int				freeall(t_fractol *fractol);

@@ -40,6 +40,7 @@ clean:
 fclean: clean
 	$(MAKE) fclean -C ./libft
 	@rm -rf $(NAME) && echo "$(NAME) was deleted"
+	rm -f *:Zone.Identifier
 	
 
 re: clean all
